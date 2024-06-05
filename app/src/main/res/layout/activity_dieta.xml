@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Dieta">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="44dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            android:onClick="volverACalendario"
+            tools:ignore="OnClick"/>
+
+        <TextView
+            android:id="@+id/textoDieta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="27dp"
+            android:text="Dieta de 3000 kcal"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <TextView
+            android:id="@+id/nombreUsuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="13dp"
+            android:text="Nombre del usuario"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoDieta" />
+
+        <TextView
+            android:id="@+id/textoDesayuno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="28dp"
+            android:text="Desayuno"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nombreUsuario" />
+
+        <TextView
+            android:id="@+id/calDesayuno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="17dp"
+            android:text="500 kcal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoDesayuno" />
+
+        <!-- Este linearLayout pertenece al desayuno -->
+        <LinearLayout
+            android:id="@+id/ejercicio1"
+            android:layout_width="373dp"
+            android:layout_height="213dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calDesayuno">
+
+            <!-- Desayuno -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:orientation="horizontal">
+
+                <!-- Etiqueta -->
+                <TextView
+                    android:layout_width="324dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Corn Flaskes 0%\n 30g | 117 kcal"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <!-- Utilizo el FrameLayout para aplicar los estilos que he hecho en boton_redondo.xml -->
+                <FrameLayout
+                    android:layout_width="61dp"
+                    android:layout_height="61dp"
+                    android:background="@drawable/boton_redondo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+                        android:id="@+id/boton1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:text="✔️"
+                        android:textColor="#EEFFEE"
+                        android:textSize="18sp" />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Alimento 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    android:orientation="horizontal">
+
+                    <!-- Nombre del alimento -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Frutos secos\n40g | 210 kcal"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <!-- Botón de check verde -->
+                    <FrameLayout
+                        android:layout_width="61dp"
+                        android:layout_height="61dp"
+                        android:background="@drawable/boton_redondo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <Button
+                            android:id="@+id/boton2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="✔️"
+                            android:textColor="#EEFFEE"
+                            android:textSize="18sp" />
+
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fruta\n100g | 50 kcal"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <!-- Botón de check verde -->
+                    <FrameLayout
+                        android:layout_width="61dp"
+                        android:layout_height="61dp"
+                        android:background="@drawable/boton_redondo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <Button
+                            android:id="@+id/boton3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="✔️"
+                            android:textColor="#EEFFEE"
+                            android:textSize="18sp" />
+
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/comidaTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="18dp"
+            android:text="Comida"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ejercicio1" />
+
+        <TextView
+            android:id="@+id/calComida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="17dp"
+            android:text="1000 kcal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comidaTexto" />
+
+        <LinearLayout
+            android:id="@+id/comida"
+            android:layout_width="373dp"
+            android:layout_height="213dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calComida">
+
+            <!-- Desayuno -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:orientation="horizontal">
+
+                <!-- Etiqueta -->
+                <TextView
+                    android:layout_width="324dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Frutos secos\n 30g | 117 kcal"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <!-- Utilizo el FrameLayout para aplicar los estilos que he hecho en boton_redondo.xml -->
+                <FrameLayout
+                    android:layout_width="61dp"
+                    android:layout_height="61dp"
+                    android:background="@drawable/boton_redondo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+                        android:id="@+id/boton4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:text="✔️"
+                        android:textColor="#EEFFEE"
+                        android:textSize="18sp" />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Alimento 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    android:orientation="horizontal">
+
+                    <!-- Nombre del alimento -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Frutos secos\n40g | 210 kcal"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <!-- Botón de check verde -->
+                    <FrameLayout
+                        android:layout_width="61dp"
+                        android:layout_height="61dp"
+                        android:background="@drawable/boton_redondo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <Button
+                            android:id="@+id/boton5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="✔️"
+                            android:textColor="#EEFFEE"
+                            android:textSize="18sp" />
+
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fruta\n100g | 50 kcal"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <!-- Botón de check verde -->
+                    <FrameLayout
+                        android:layout_width="61dp"
+                        android:layout_height="61dp"
+                        android:background="@drawable/boton_redondo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <Button
+                            android:id="@+id/boton6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="✔️"
+                            android:textColor="#EEFFEE"
+                            android:textSize="18sp" />
+
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/merienda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="18dp"
+            android:text="Merienda"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/comida" />
+
+        <TextView
+            android:id="@+id/meriendaCal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="17dp"
+            android:text="1000 kcal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/merienda" />
+
+        <LinearLayout
+            android:id="@+id/meriendaLayout"
+            android:layout_width="373dp"
+            android:layout_height="213dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/meriendaCal">
+
+            <!-- Desayuno -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:orientation="horizontal">
+
+                <!-- Etiqueta -->
+                <TextView
+                    android:layout_width="324dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Frutos secos\n 30g | 117 kcal"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <!-- Utilizo el FrameLayout para aplicar los estilos que he hecho en boton_redondo.xml -->
+                <FrameLayout
+                    android:layout_width="61dp"
+                    android:layout_height="61dp"
+                    android:background="@drawable/boton_redondo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <Button
+                        android:id="@+id/boton7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:text="✔️"
+                        android:textColor="#EEFFEE"
+                        android:textSize="18sp" />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Alimento 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    android:orientation="horizontal">
+
+                    <!-- Nombre del alimento -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Frutos secos\n40g | 210 kcal"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <!-- Botón de check verde -->
+                    <FrameLayout
+                        android:layout_width="61dp"
+                        android:layout_height="61dp"
+                        android:background="@drawable/boton_redondo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <Button
+                            android:id="@+id/boton8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="✔️"
+                            android:textColor="#EEFFEE"
+                            android:textSize="18sp" />
+
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Fruta\n100g | 50 kcal"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <!-- Botón de check verde -->
+                    <FrameLayout
+                        android:layout_width="61dp"
+                        android:layout_height="61dp"
+                        android:background="@drawable/boton_redondo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <Button
+                            android:id="@+id/boton9"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:text="✔️"
+                            android:textColor="#EEFFEE"
+                            android:textSize="18sp" />
+
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

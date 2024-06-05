@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calendario">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/InfoUsuario"
+                android:layout_width="41dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="29dp"
+                android:onClick="irAInfoUsuario"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/iconousuario"
+                tools:ignore="OnClick" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="129dp"
+                android:layout_marginTop="46dp"
+                android:layout_marginEnd="76dp"
+                android:text="FitLife"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/InfoUsuario"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="58dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="1dp"
+                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/iconochat"
+                android:onClick="irAChat"/>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="37dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/iconocampana" />
+
+            <TextView
+                android:id="@+id/calendarioTexto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="50dp"
+                android:text="Calendario"
+                android:textColor="@color/cardview_dark_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/InfoUsuario" />
+
+            <TextView
+                android:id="@+id/cogerFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="51dp"
+                android:layout_marginEnd="166dp"
+                android:text="Fecha actual"
+                android:textColor="@color/cardview_dark_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/calendarioTexto"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <LinearLayout
+                android:id="@+id/dias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/calendarioTexto">
+
+                <Button
+                    android:id="@+id/lunes"
+                    android:layout_width="13dp"
+                    android:layout_height="78dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.7"
+                    android:text="L"
+                    app:backgroundTint="#979696" />
+
+                <Button
+                    android:id="@+id/martes"
+                    android:layout_width="13dp"
+                    android:layout_height="78dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.7"
+                    android:text="M"
+                    app:backgroundTint="#979696" />
+
+                <Button
+                    android:id="@+id/miercoles"
+                    android:layout_width="13dp"
+                    android:layout_height="78dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.7"
+                    android:text="X"
+                    app:backgroundTint="#979696" />
+
+                <Button
+                    android:id="@+id/jueves"
+                    android:layout_width="13dp"
+                    android:layout_height="78dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.7"
+                    android:text="J"
+                    app:backgroundTint="#979696" />
+
+                <Button
+                    android:id="@+id/viernes"
+                    android:layout_width="13dp"
+                    android:layout_height="78dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.7"
+                    android:text="V"
+                    app:backgroundTint="#979696" />
+
+                <Button
+                    android:id="@+id/sabado"
+                    android:layout_width="13dp"
+                    android:layout_height="78dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.7"
+                    android:text="S"
+                    app:backgroundTint="#979696" />
+
+                <Button
+                    android:id="@+id/domingo"
+                    android:layout_width="13dp"
+                    android:layout_height="78dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.7"
+                    android:text="D"
+                    app:backgroundTint="#979696" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/cardioFoto"
+                android:layout_width="51dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="31dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dias"
+                app:srcCompat="@drawable/cardio" />
+
+            <Button
+                android:id="@+id/irACardio"
+                android:layout_width="286dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="irACardio"
+                android:text="Cardio"
+                app:backgroundTint="#979696"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cardioFoto"
+                app:layout_constraintTop_toBottomOf="@+id/dias" />
+
+            <ImageView
+                android:id="@+id/dietaFoto"
+                android:layout_width="51dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="38dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardioFoto"
+                app:srcCompat="@drawable/dieta" />
+
+            <Button
+                android:id="@+id/irADieta"
+                android:layout_width="286dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="51dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="irADieta"
+                android:text="Dieta"
+                app:backgroundTint="#979696"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dietaFoto"
+                app:layout_constraintTop_toBottomOf="@+id/irACardio" />
+
+            <ImageView
+                android:id="@+id/rutinaFoto"
+                android:layout_width="53dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="38dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dietaFoto"
+                app:srcCompat="@drawable/rutina" />
+
+            <Button
+                android:id="@+id/irARutina"
+                android:layout_width="286dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="51dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="irAPecho"
+                android:text="Dia de pecho"
+                app:backgroundTint="#979696"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rutinaFoto"
+                app:layout_constraintTop_toBottomOf="@+id/irADieta" />
+
+            <ImageView
+                android:id="@+id/metricasFoto"
+                android:layout_width="53dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="38dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rutinaFoto"
+                app:srcCompat="@drawable/metricas" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="286dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="51dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="irAMedirPeso"
+                android:text="Metricas"
+                app:backgroundTint="#979696"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/metricasFoto"
+                app:layout_constraintTop_toBottomOf="@+id/irARutina" />
+
+            <ImageView
+                android:id="@+id/piernaFoto"
+                android:layout_width="53dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="38dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/metricasFoto"
+                app:srcCompat="@drawable/rutina" />
+
+            <Button
+                android:id="@+id/irAPierna"
+                android:layout_width="286dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="51dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="irAPierna"
+                android:text="Dia de pierna"
+                app:backgroundTint="#979696"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/piernaFoto"
+                app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+            <ImageView
+                android:id="@+id/espaldaFoto"
+                android:layout_width="53dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="38dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/piernaFoto"
+                app:srcCompat="@drawable/rutina" />
+
+            <Button
+                android:id="@+id/irAEspalda"
+                android:layout_width="286dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="51dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="IrAEspalda"
+                android:text="Dia de espalda"
+                app:backgroundTint="#979696"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/espaldaFoto"
+                app:layout_constraintTop_toBottomOf="@+id/irAPierna" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/icono1"
+            android:onClick="irAHome"
+            tools:ignore="OnClick" />
+
+        <ImageView
+            android:layout_width="4dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/icono2" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/icono3"
+            android:onClick="irAProgreso"
+            tools:ignore="OnClick" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="59dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/icono4"
+            android:onClick="irANutricion"
+            tools:ignore="OnClick" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

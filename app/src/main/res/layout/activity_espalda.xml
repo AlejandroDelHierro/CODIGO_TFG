@@ -1,0 +1,1430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Espalda">
+
+        <ImageView
+            android:id="@+id/volverCalendario"
+            android:layout_width="41dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="29dp"
+            android:onClick="volverACalendario"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        <TextView
+            android:id="@+id/textoEspalda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:text="Dia de Espalda"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/volverCalendario" />
+
+        <TextView
+            android:id="@+id/textoSerie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="32dp"
+            android:text="Superset x3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoEspalda" />
+
+        <LinearLayout
+            android:id="@+id/ejercicio1"
+            android:layout_width="373dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginEnd="18dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imagenEjercicio1"
+                    android:layout_width="80dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/receta1" />
+
+                <TextView
+                    android:id="@+id/textoEjercicio1"
+                    android:layout_width="195dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Jalon al pecho\n\n12/10/8"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/irEjercicio1"
+                    android:layout_width="63dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_marginTop="1dp"
+                    android:rotation="270"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="?attr/actionModeCloseDrawable" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <VideoView
+            android:id="@+id/videoJalon"
+            android:layout_width="380dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="50dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/ejer1serie1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ejercicio1" />
+
+
+        <LinearLayout
+            android:id="@+id/datosEjer1Serie1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ejer1serie1"
+            android:visibility="gone" >
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoRepe1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/repeticionesEjer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoRep1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoEjer1serie1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/datosEjer1Serie3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ejer1serie3">
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoRepe3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/repeticionesEjer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoRep3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoEjer1serie3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/datosEjer1Serie2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ejer1serie2"
+            android:visibility="gone" >
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoRepe2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/repeticionesEjer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoRep2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoEjer1serie2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ejercicio2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="18dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guardarEjercicio1">
+
+            <ImageView
+                android:id="@+id/imagenEjercicio2"
+                android:layout_width="80dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/receta1" />
+
+            <TextView
+                android:id="@+id/textoEjercicio2"
+                android:layout_width="195dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Remo girondal\n\nfallo x3"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/irEjercicio2"
+                android:layout_width="63dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="1dp"
+                android:rotation="270"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="?attr/actionModeCloseDrawable" />
+        </LinearLayout>
+
+        <VideoView
+            android:id="@+id/videoGironda"
+            android:layout_width="380dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ejercicio2" />
+
+        <LinearLayout
+            android:id="@+id/datosEjer2Serie1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoSerie1Ejer2">
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoRepe1Ejer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/repeticionesEjer2Serie1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoRep1Ejer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoEjer2serie1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/datosEjer2Serie2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoSerie2Ejer2">
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoRepe2Ejer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/repeticionesEjer2Serie2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoRep2Ejer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoEjer2serie2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/datosEjer2Serie3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoSerie3Ejer2">
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoRepe3Ejer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/repeticionesEjer2Serie3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoRep3Ejer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoEjer2serie3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/guardarEjercicio2"
+            android:layout_width="378dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:text="Guardar"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosEjer2Serie3" />
+
+        <LinearLayout
+            android:id="@+id/ejercicio3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="18dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guardarEjercicio2">
+
+            <ImageView
+                android:id="@+id/imagenEjercicio3"
+                android:layout_width="80dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/receta1" />
+
+            <TextView
+                android:id="@+id/textoEjercicio3"
+                android:layout_width="195dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Remo unilateral\n\n12/10/10"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/irEjercicio3"
+                android:layout_width="63dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="1dp"
+                android:rotation="270"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="?attr/actionModeCloseDrawable" />
+        </LinearLayout>
+
+        <VideoView
+            android:id="@+id/videoRemoUni"
+            android:layout_width="380dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ejercicio3" />
+
+        <TextView
+            android:id="@+id/textoSerie1Ejer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="22dp"
+            android:text="Serie 1"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoRemoUni" />
+
+        <LinearLayout
+            android:id="@+id/datosEjer3Serie1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoSerie1Ejer3">
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoRepe1Ejer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/repeticionesEjer3Serie1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoRep1Ejer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoEjer3serie1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textoSerie2Ejer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="22dp"
+            android:text="Serie 2"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosEjer3Serie1" />
+
+        <LinearLayout
+            android:id="@+id/datosEjer3Serie2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoSerie2Ejer3">
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoRepe2Ejer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/repeticionesEjer3Serie2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoRep2Ejer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoEjer3serie2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textoSerie3Ejer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="22dp"
+            android:text="Serie 3"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosEjer3Serie2" />
+
+        <LinearLayout
+            android:id="@+id/datosEjer3Serie3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoSerie3Ejer3">
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoRepe3Ejer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/repeticionesEjer3Serie3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoRep3Ejer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoEjer3serie3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/guardarEjercicio3"
+            android:layout_width="378dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:text="Guardar"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosEjer3Serie3" />
+
+        <LinearLayout
+            android:id="@+id/ejercicio4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="18dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guardarEjercicio3">
+
+            <ImageView
+                android:id="@+id/imagenEjercicio4"
+                android:layout_width="80dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/receta1" />
+
+            <TextView
+                android:id="@+id/textoEjercicio4"
+                android:layout_width="195dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Hombro posterior\n\nfallo x3"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/irEjercicio4"
+                android:layout_width="63dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="1dp"
+                android:rotation="270"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="?attr/actionModeCloseDrawable" />
+        </LinearLayout>
+
+        <VideoView
+            android:id="@+id/videoHombro"
+            android:layout_width="380dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ejercicio4" />
+
+        <TextView
+            android:id="@+id/textoSerie1Ejer4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="22dp"
+            android:text="Serie 1"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoHombro" />
+
+        <LinearLayout
+            android:id="@+id/datosEjer4Serie1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoSerie1Ejer4">
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoRepe1Ejer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/repeticionesEjer4Serie1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoRep1Ejer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoEjer4serie1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textoSerie2Ejer4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="22dp"
+            android:text="Serie 2"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosEjer4Serie1" />
+
+        <LinearLayout
+            android:id="@+id/datosEjer4Serie2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoSerie2Ejer4">
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoRepe2Ejer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/repeticionesEjer4Serie2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoRep2Ejer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoEjer4serie2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textoSerie3Ejer4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="22dp"
+            android:text="Serie 3"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosEjer4Serie2" />
+
+        <LinearLayout
+            android:id="@+id/datosPesoActual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoSerie3Ejer4">
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoPesoActual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoActualMetrica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoTexto2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoObjetivoformulario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/guardarDatosPeso"
+            android:layout_width="378dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:text="Guardar"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosPesoActual" />
+
+        <LinearLayout
+            android:id="@+id/ejercicio5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoSuperset2">
+
+            <ImageView
+                android:id="@+id/imagenEjercicio5"
+                android:layout_width="80dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/receta1" />
+
+            <TextView
+                android:id="@+id/textoEjercicio5"
+                android:layout_width="195dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Curl de biceps con barra\n\nfallo + dropset x2"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/irEjercicio5"
+                android:layout_width="63dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="1dp"
+                android:rotation="270"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="?attr/actionModeCloseDrawable" />
+        </LinearLayout>
+
+        <VideoView
+            android:id="@+id/videoCurl1"
+            android:layout_width="380dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ejercicio5" />
+
+        <TextView
+            android:id="@+id/textoSerie1Ejer5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="22dp"
+            android:text="Serie 1"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoCurl1" />
+
+        <LinearLayout
+            android:id="@+id/datosEjer5Serie1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoSerie1Ejer5">
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoRepe1Ejer5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/repeticionesEjer5Serie1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoRep1Ejer5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoEjer5serie1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textoSerie2Ejer5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="22dp"
+            android:text="Serie 2"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosEjer5Serie1" />
+
+        <LinearLayout
+            android:id="@+id/datosEjer5Serie2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoSerie2Ejer5">
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoRepe2Ejer5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/repeticionesEjer5Serie2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoRep2Ejer5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoEjer5serie2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/guardarEjercicio5"
+            android:layout_width="378dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:text="Guardar"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosEjer5Serie2" />
+
+        <LinearLayout
+            android:id="@+id/ejercicio6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="18dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guardarEjercicio5">
+
+            <ImageView
+                android:id="@+id/imagenEjercicio6"
+                android:layout_width="80dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/receta1" />
+
+            <TextView
+                android:id="@+id/textoEjercicio6"
+                android:layout_width="195dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Curl de biceps martillo\n\nfallo + dropset x2"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/irEjercicio6"
+                android:layout_width="63dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="1dp"
+                android:rotation="270"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="?attr/actionModeCloseDrawable" />
+        </LinearLayout>
+
+        <VideoView
+            android:id="@+id/videoCurl2"
+            android:layout_width="380dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ejercicio6" />
+
+        <TextView
+            android:id="@+id/textoSerie1Ejer6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="22dp"
+            android:text="Serie 1"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoCurl2" />
+
+        <LinearLayout
+            android:id="@+id/datosEjer6Serie1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoSerie1Ejer6">
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoRepe1Ejer6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/repeticionesEjer6Serie1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoRep1Ejer6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoEjer6serie1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textoSerie2Ejer6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="22dp"
+            android:text="Serie 2"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosEjer6Serie1" />
+
+        <LinearLayout
+            android:id="@+id/datosEjer6Serie2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="18dp"
+            android:background="#C5C5C5"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textoSerie2Ejer6">
+
+            <!-- Primer input -->
+            <TextView
+                android:id="@+id/textoRepe2Ejer6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Repeticiones"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/repeticionesEjer6Serie2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Repeticiones"
+                android:padding="8dp" />
+
+            <!-- Segundo input -->
+
+            <TextView
+                android:id="@+id/pesoRep2Ejer6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/pesoEjer6serie2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="00 Kg"
+                android:padding="8dp"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/guardarEjercicio6"
+            android:layout_width="378dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:text="Guardar"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosEjer6Serie2" />
+
+        <TextView
+            android:id="@+id/textoSuperset2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="22dp"
+            android:text="Superset x3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guardarDatosPeso" />
+
+        <TextView
+            android:id="@+id/ejer1serie1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="230dp"
+            android:text="Serie 1"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ejercicio1" />
+
+        <TextView
+            android:id="@+id/ejer1serie2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="22dp"
+            android:text="Serie 2"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosEjer1Serie1" />
+
+        <TextView
+            android:id="@+id/ejer1serie3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="22dp"
+            android:text="Serie 3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosEjer1Serie2"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/guardarEjercicio1"
+            android:layout_width="378dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:text="Guardar"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosEjer1Serie3" />
+
+        <TextView
+            android:id="@+id/textoSerie1Ejer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="230dp"
+            android:text="Serie 1"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ejercicio2" />
+
+        <TextView
+            android:id="@+id/textoSerie2Ejer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="22dp"
+            android:text="Serie 2"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosEjer2Serie1" />
+
+        <TextView
+            android:id="@+id/textoSerie3Ejer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="22dp"
+            android:text="Serie 3"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datosEjer2Serie2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

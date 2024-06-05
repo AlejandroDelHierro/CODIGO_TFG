@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "474433154894",
+    "project_id": "lifefit-54818",
+    "storage_bucket": "lifefit-54818.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474433154894:android:dff50b27d6fdf5249bf81f",
+        "android_client_info": {
+          "package_name": "com.example.lifefite"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNuVf5IRGgEEOmbjFqkAYUZodY8BMwbtw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
